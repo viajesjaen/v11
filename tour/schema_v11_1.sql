@@ -1,4 +1,0 @@
--- AR Turismo v11.1 · Rutas guiadas
--- NO requiere cambios en Supabase respecto a schema_v11_0.sql.
--- El orden de tourism_route_places pasa a ser vinculante en la experiencia pública.
--- El progreso de rutas se guarda localmente en el navegador para visitantes anónimos.
