@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10261f"><meta name="description" content="Descubre monumentos, rutas, empresas y lugares de interés. Déjate guiar y descubre su historia con tu móvil.">
+<title>Descubre tu patrimonio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe4;--bg2:#fffaf0;--green:#17352b;--green2:#23483a;--gold:#a9782f;--gold2:#c89b4b;--cream:#fbf8f0;--ink:#193027;--muted:#65736b;--line:rgba(169,120,47,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0%,#fffdf8 0,#f4efe4 55%,#e9e1d2 100%);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:radial-gradient(#17352b .8px,transparent .8px);background-size:24px 24px}.wrap{width:min(900px,92vw);margin:auto}.landing{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:28px 0}.landing-card{text-align:center;width:min(720px,100%)}.brand-logo{display:block;width:min(470px,82vw);height:auto;margin:0 auto 20px;filter:drop-shadow(0 16px 28px rgba(23,53,43,.13));border-radius:24px}.lead{color:#56655d;font-size:clamp(1rem,2vw,1.16rem);line-height:1.6;max-width:590px;margin:0 auto 28px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:13px;max-width:540px;margin:0 auto}.action{min-height:62px;border-radius:17px;padding:15px 18px;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:800;font-size:1rem;cursor:pointer;font-family:inherit}.primary{background:linear-gradient(135deg,#b88738,#91631f);color:#fffdf7;border:0;box-shadow:0 14px 32px rgba(145,99,31,.2)}.secondary{background:rgba(255,255,255,.68);color:var(--green);border:1px solid rgba(23,53,43,.16);box-shadow:0 8px 22px rgba(23,53,43,.05)}.hint{margin:17px auto 0;color:#7a817c;font-size:.78rem}.instructions{position:fixed;inset:0;z-index:20;background:rgba(17,30,24,.62);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}.instructions.open{display:flex}.modal{width:min(600px,100%);max-height:90vh;overflow:auto;background:#fbf8f0;color:#17241e;border-radius:25px;padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.3);position:relative;border:1px solid rgba(169,120,47,.18)}.close{position:absolute;right:14px;top:14px;width:42px;height:42px;border:0;border-radius:50%;background:#ece7dc;color:#17241e;font-size:20px;cursor:pointer}.modal .eyebrow{color:#8b6b38;margin-bottom:7px}.modal h2{font-family:'Playfair Display',Georgia,serif;font-size:2.1rem;margin:0 45px 8px 0}.modal-intro{color:#5e6962;line-height:1.55;margin:0 0 20px}.guide{display:grid;gap:10px}.guide-item{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;padding:13px 14px;border-radius:16px;background:#fff;border:1px solid #dedfd9}.guide-num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#17352b;color:#fff;font-weight:900}.guide-item strong{display:block;margin:2px 0 3px}.guide-item p{margin:0;color:#657069;font-size:.9rem;line-height:1.45}.modal-note{margin:15px 0 0;padding:12px 14px;border-radius:14px;background:#edf1eb;color:#53625a;font-size:.85rem;line-height:1.45}.modal-action{display:block;text-align:center;margin-top:17px;background:#17352b;color:#fff;text-decoration:none;padding:13px;border-radius:13px;font-weight:800}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:560px){.landing{padding:18px 0}.brand-logo{width:min(430px,94vw);margin-bottom:12px;border-radius:18px}.lead{font-size:.98rem;margin-bottom:22px}.actions{grid-template-columns:1fr}.action{min-height:58px}.modal{padding:22px 18px}.modal h2{font-size:1.8rem}.guide-item{grid-template-columns:40px 1fr}}
+</style>
+</head>
+<body>
+<main class="landing">
+  <div class="wrap">
+    <section class="landing-card" aria-labelledby="main-title">
+      <img class="brand-logo" src="./logo-descubre-jaen.png" id="projectLogo" alt="Descubre lo que tienes delante">
+      <h1 id="main-title" class="sr-only">Descubre lo que tienes delante.</h1>
+      <p id="projectLead" class="lead">Explora Jaén, descubre sus lugares y déjate guiar hasta ellos. Todo desde tu móvil y sin instalar ninguna aplicación.</p>
+      <div class="actions">
+        <button class="action secondary" id="instructionsBtn" type="button">💡 ¿Cómo funciona?</button>
+        <a class="action primary" href="./app.html">🧭 Empezar a descubrir</a>
+      </div>
+      <p class="hint">No necesitas instalar ninguna aplicación.</p>
+    </section>
+  </div>
+</main>
+
+<div class="instructions" id="instructions" role="dialog" aria-modal="true" aria-labelledby="instructionsTitle">
+  <section class="modal">
+    <button class="close" id="closeInstructions" type="button" aria-label="Cerrar instrucciones">×</button>
+    <div class="eyebrow">Muy fácil</div>
+    <h2 id="instructionsTitle">¿Cómo funciona?</h2>
+    <p class="modal-intro">Solo tienes que seguir estos pasos. No hace falta saber nada de realidad aumentada ni instalar ninguna aplicación.</p>
+    <div class="guide">
+      <article class="guide-item"><div class="guide-num">1</div><div><strong>Elige qué quieres ver</strong><p>En la siguiente pantalla podrás elegir entre <b id="guideContentPlural">Monumentos</b>, <b>Empresas y colaboradores</b> o <b>Rutas</b>.</p></div></article>
+      <article class="guide-item"><div class="guide-num">2</div><div><strong>Si eliges un contenido o una ruta, te guiamos</strong><p>Permite que el móvil use tu ubicación y sigue la dirección que aparece en pantalla hasta llegar al lugar.</p></div></article>
+      <article class="guide-item"><div class="guide-num">3</div><div><strong>Al llegar, usa la cámara</strong><p>Apunta con la cámara hacia el contenido. El sistema lo reconocerá automáticamente.</p></div></article>
+      <article class="guide-item"><div class="guide-num">4</div><div><strong>Descubre su historia</strong><p>Cuando se reconozca el lugar podrás consultar información, imágenes, audios, vídeos y otros contenidos.</p></div></article>
+    </div>
+    <p class="modal-note">📍 <b>Consejo:</b> para una mejor experiencia, permite el acceso a la ubicación y a la cámara cuando el móvil te lo solicite.</p>
+    <a class="modal-action" href="./app.html">Empezar a descubrir →</a>
+  </section>
+</div>
+
+<script src="./project-config.js?v=1"></script>
+<script>
+(function(){
+  const p=window.APP_PROJECT||{};
+  const c=p.content||{};
+  const logo=document.getElementById('projectLogo'); if(logo&&p.logo) logo.src=p.logo;
+  const lead=document.getElementById('projectLead'); if(lead&&p.description) lead.textContent=p.description;
+  const gp=document.getElementById('guideContentPlural'); if(gp&&c.plural) gp.textContent=c.plural;
+  const title=document.querySelector('title'); if(title) title.textContent=(p.name||'AR Turismo')+' · '+(p.title||'Descubre');
+})();
+</script>
+<script>
+(function(){
+  const modal=document.getElementById('instructions');
+  const open=document.getElementById('instructionsBtn');
+  const close=document.getElementById('closeInstructions');
+  function show(){modal.classList.add('open');close.focus();document.body.style.overflow='hidden'}
+  function hide(){modal.classList.remove('open');document.body.style.overflow='';open.focus()}
+  open.addEventListener('click',show);close.addEventListener('click',hide);
+  modal.addEventListener('click',e=>{if(e.target===modal)hide()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))hide()});
+})();
+</script>
+</body></html>
